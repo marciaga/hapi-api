@@ -10,13 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "async": "^2.0.0-rc.5",
     "babel-register": "^6.9.0",
-    "bell": "^7.8.0",
-    "blipp": "^2.3.0",
+    "boom": "^3.2.1",
     "hapi": "^13.4.1",
-    "hapi-auth-cookie": "^6.1.1",
-    "hoek": "^4.0.1"
+    "joi": "^8.4.1",
+    "mongojs": "^2.4.0",
+    "node-uuid": "^1.4.7"
   },
   "devDependencies": {
     "babel-core": "^6.9.1",

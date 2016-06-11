@@ -1,5 +1,4 @@
-### This is a modified work-in-progress version of Developing a hapi Edge https://bleedingedgepress.com/developing-a-hapi-edge/. It has Babel 6 installed, in case you're into that sort of thing...
-
+### This is a WIP Hapi API project using MongoDB
 ### To run it:
 
 Install the dependencies:
@@ -8,8 +7,16 @@ Install the dependencies:
 > $ npm install
 ```
 
-Run server:
+Run your local MongoDB server:
+
+Run the Hapi server:
 
 ```
 > $ npm run start
 ```
+Client Routes implemented: '/books', '/books/{id}'
+API Routes implemented: '/api/books', '/api/books/{id}'
+
+* Works with Node 4+
+* Server logging implemented with Good/Good console
+* Babel 6 installed, so go nuts
