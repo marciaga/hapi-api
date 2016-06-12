@@ -3,19 +3,20 @@ import Joi from 'joi';
 import uuid from 'node-uuid';
 // exports.register registers the plugin with Hapi
 exports.register = function(server, options, next) {
-    const db = server.app.db;
+    const db = server.plugins['hapi-mongodb'].db
     const books = db.collection('books');
     // GET all books
     server.route({
         method: 'GET',
         path: '/books',
         handler: function(request, reply) {
-            books.find((err, docs) => {
-                if (err) {
-                    return reply(Boom.badData('Internal MongoDB Error', err));
+            books.find().toArray((err, docs) => {
+                    if (err) {
+                        return reply(Boom.badData('Internal MongoDB Error', err));
+                    }
+                    reply(docs);
                 }
-                reply(docs);
-            });
+            )
         }
     });
     // GET ONE book by id
