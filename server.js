@@ -2,7 +2,7 @@ import Hapi from 'hapi';
 import mongojs from 'mongojs';
 import good from 'good';
 import goodConsole from 'good-console';
-import * as books from './routes/books';
+import * as books from './src/modules/book/index';
 
 const server = new Hapi.Server();
 server.connection({ port: 3000 });
