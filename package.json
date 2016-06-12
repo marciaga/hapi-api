@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "ava",
+    "dev": "nodemon -e js,jsx,json,hbs --watch src --ignore test --harmony start.js",
     "start": "node start.js"
   },
   "author": "",
