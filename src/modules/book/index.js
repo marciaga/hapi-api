@@ -14,7 +14,8 @@ exports.register = function(server, options, next) {
                     if (err) {
                         return reply(Boom.badData('Internal MongoDB Error', err));
                     }
-                    reply(docs);
+                    // reply(docs);
+                    reply.view('layout/default')
                 }
             )
         }

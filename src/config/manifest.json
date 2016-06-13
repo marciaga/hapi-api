@@ -20,8 +20,22 @@
                         }, "stdout"]
                     }
                 }
+
             }
         },
+        { "plugin": "vision" },
+        {
+            "plugin": {
+                "register": "visionary",
+                "options": {
+                    "engines": { "hbs": "handlebars" },
+                    "path": "src/templates",
+                    "layoutPath": "src/templates/layout",
+                    "layout": "default"
+                }
+            }
+        },
+        { "plugin": "inert" },
         {
             "plugin": {
                 "register": "hapi-mongodb",

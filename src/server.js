@@ -1,6 +1,8 @@
 'use strict';
 
-require('babel-core/register');
+require('babel-core/register')({
+    presets: ['es2015', 'react'],
+});
 
 const path = require('path');
 const Glue = require('glue');
